@@ -4,16 +4,16 @@ Citibike-PHP
   A PHP Client for Citibike's REST API
 
 Installation
-============
+------------
 
 Documentation
-=============
+-------------
 
 Testing
-=======
+-------
 
 License
-=======
+-------
 
   The MIT License (MIT)
   
