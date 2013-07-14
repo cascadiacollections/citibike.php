@@ -6,6 +6,8 @@ Citibike-PHP
 Installation
 ------------
 
+  git clone `https://github.com/KevinTCoughlin/citibike-php.git`
+
 Documentation
 -------------
 
