@@ -1,0 +1,28 @@
+{
+    "name": "kevintcoughlin/citibike",
+    "description": "PHP Client for Citibike's REST API",
+    "keywords": ["citibike", "travel", "NYC"],
+    "homepage": "https://github.com/KevinTCoughlin/citibike-php",
+    "authors": [
+        {
+            "name": "Kevin Coughlin",
+            "email": "kevintcoughlin@gmail.com",
+            "homepage": "https://github.com/KevinTCoughlin",
+            "role": "developer"
+        }
+    ],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.0",
+        "guzzle/guzzle": "~3.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Citibike": "lib"
+        }
+    }
+}
