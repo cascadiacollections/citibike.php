@@ -31,30 +31,57 @@
       </header>
       <section>
         <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
-
-<h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Set up the Citibike client:</p>
+<p>Set up the Citibike client:<a href="http://getcomposer.org/doc/01-basic-usage.md">http://getcomposer.org/doc/01-basic-usage.md</a>)</p>
 
 <div class="highlight"><pre><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Citibike\Client</span><span class="p">();</span>
 </pre></div>
 
 <p>Then do what you wish with the data:</p>
 
-<div class="highlight"><pre><span class="k">echo</span> <span class="s2">"Getting Stations Data</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="nv">$stations</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getStations</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$stations</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="s2">"Getting Branches Data</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="nv">$branches</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getBranches</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$branches</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="s2">"Getting Helmets Data</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="nv">$helmets</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getHelmets</span><span class="p">();</span>
-<span class="k">echo</span> <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$helmets</span><span class="p">);</span>
+<div class="highlight"><pre><span class="k">echo</span> <span class="s2">"Getting Stations</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getStations</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">results</span> <span class="k">as</span> <span class="nv">$station</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"ID: "</span> <span class="o">.</span> <span class="nv">$station</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Label: "</span> <span class="o">.</span> <span class="nv">$station</span><span class="o">-&gt;</span><span class="na">label</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Latitude: "</span> <span class="o">.</span> <span class="nv">$station</span><span class="o">-&gt;</span><span class="na">latitude</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Longitude: "</span> <span class="o">.</span> <span class="nv">$station</span><span class="o">-&gt;</span><span class="na">longitude</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Available Bikes: "</span> <span class="o">.</span> <span class="nv">$station</span><span class="o">-&gt;</span><span class="na">availableBikes</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Available Docks: "</span> <span class="o">.</span> <span class="nv">$station</span><span class="o">-&gt;</span><span class="na">availableDocks</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
+
+<h3>
+<a name="stations-method" class="anchor" href="#stations-method"><span class="octicon octicon-link"></span></a>Stations Method</h3>
+
+<div class="highlight"><pre><span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getStations</span><span class="p">();</span>
+</pre></div>
+
+<h3>
+<a name="branches-method" class="anchor" href="#branches-method"><span class="octicon octicon-link"></span></a>Branches Method</h3>
+
+<div class="highlight"><pre><span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getBranches</span><span class="p">();</span>
+</pre></div>
+
+<h3>
+<a name="helmets-method" class="anchor" href="#helmets-method"><span class="octicon octicon-link"></span></a>Helmets Method</h3>
+
+<div class="highlight"><pre><span class="nv">$client</span><span class="o">-&gt;</span><span class="na">getHelmets</span><span class="p">();</span>
+</pre></div>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Citibike-PHP is available on <a href="http://getcomposer.org">composer</a>. You can install it by adding Citibike-PHP as a project dependency in your <code>composer.json</code> file like so:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"require"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"kevintcoughlin/citibike"</span><span class="o">:</span> <span class="s2">"dev-master"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Then simply run <code>$ php composer.phar install</code> to install the library. More documentation on using composer can be found <a href="http://getcomposer.org/doc/01-basic-usage.md">here</a>.</p>
 
 <h2>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
@@ -71,17 +98,12 @@
 <p>More documentation for composer can be found at <a href="http://getcomposer.org">getcomposer.org</a>.</p>
 
 <h2>
-<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation</h2>
-
-<h2>
 <a name="testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h2>
 
 <p>Citibike-PHP has full unit tests that can be run with PHPUnit using:</p>
 
 <pre><code>$ phpunit
 </code></pre>
-
-<p>This will also generate a coverage report into ./coverage</p>
 
 <h2>
 <a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h2>
