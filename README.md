@@ -40,7 +40,7 @@ $client->getHelmets();
 
 ## Installation
 
-Citibike.php is available on [composer](http://getcomposer.org). You can install it by adding Citibike.php as a project dependency in your `composer.json` file like so:
+Citibike.php is available via [composer](https://packagist.org/packages/kevintcoughlin/citibike). You can install it by adding Citibike.php as a project dependency in your `composer.json` file like so:
 
 ```js
 {
@@ -60,7 +60,7 @@ to install the library. More documentation on using composer can be found [here]
 
 ## Dependencies
 
-Citibike.php is available via [composer](http://google.com)
+Citibike.php is available via [composer](https://packagist.org/packages/kevintcoughlin/citibike)
 
 * Guzzle ~3.7
 
