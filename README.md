@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/KevinTCoughlin/citibike.php.png?branch=master)](https://travis-ci.org/KevinTCoughlin/citibike.php)
+
 ## Usage
 
 Set up the Citibike client:
