@@ -90,7 +90,7 @@ This is my first PHP library so feel free to improve the code and issue a pull r
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Kevin Coughlin
+Copyright (c) 2014 Kevin Coughlin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
